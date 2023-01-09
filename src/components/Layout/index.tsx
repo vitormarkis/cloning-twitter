@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components'
 
 import MenuBar from '../MenuBar';
 import Main from '../Main'
@@ -18,9 +17,5 @@ const Layout: React.FC = () => {
     </Container>
   )
 }
-
-const NewMenuButton = styled(MenuButton)`
-  outline: 2px solid #ff0;
-`;
 
 export default Layout;

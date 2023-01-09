@@ -16,12 +16,12 @@ export const Container = styled.div`
   left: 0;
 
   @media (max-width: 859px) { width: unset }
-  width: 260px;
+  width: 240px;
+  flex-shrink: 0;
   
   padding: 9px 20px 20px;
 
   max-height: 100vh;
-  overflow-y: auto;
 `;
 
 export const Top = styled.div`
