@@ -4,10 +4,12 @@ import { Home, Search, Notifications, Email } from '../../styles/Icons'
 
 
 export const Container = styled.div`
+    @media (min-width: 540px) { display: none; }
+
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 2;
+    z-index: 10;
 
     background: var(--primary);
     width: 100%;
@@ -18,10 +20,6 @@ export const Container = styled.div`
     justify-content: space-between;
     padding: 8px min(46px, max(10vw, 10px));
     /* 46px é o máximo, e 10px é o mínimo, entre eles, fica o 10vw */
-
-    @media (min-width: 500px) {
-        display: none;
-    }
 `;
 
 // const iconCSS = css`

@@ -4,6 +4,8 @@ import {
     Container,
     Icons,
     Status,
+    IconWrapper,
+    IconHover,
     ViewsIcon,
     CommentIcon,
     RetweetIcon,
@@ -16,23 +18,38 @@ const InteractIcons: React.FC = () => {
     <Container>
         <Icons>
             <Status>
-                <ViewsIcon />
-                2,9mi
+                <IconWrapper>
+                    <IconHover />
+                    <ViewsIcon />
+                </IconWrapper>
+                <p>2,9mi</p>
             </Status>
             <Status>
-                <CommentIcon />
-                18
+                <IconWrapper>
+                    <IconHover />
+                    <CommentIcon />
+                </IconWrapper>
+                <p>18</p>
             </Status>
             <Status>
-                <RetweetIcon />
-                18
+                <IconWrapper>
+                    <IconHover />
+                    <RetweetIcon />
+                </IconWrapper>
+                <p>18</p>
             </Status>
             <Status>
-                <LikeIcon />
-                372
+                <IconWrapper>
+                    <IconHover />
+                    <LikeIcon />
+                </IconWrapper>
+                <p>372</p>
             </Status>
             <Status>
-                <ShareIcon />
+                <IconWrapper>
+                    <IconHover />
+                    <ShareIcon />
+                </IconWrapper>
             </Status>
         </Icons>
     </Container>

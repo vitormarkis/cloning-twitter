@@ -1,22 +1,14 @@
 import ProfilePage from '../ProfilePage';
 import React from 'react';
+import Header from '../Header'
 import BottomMenu from '../BottomMenu'
 
-import { Container, Header, BackIcon, ProfileInfo, HomeIcon, SearchIcon, BellIcon, EmailIcon } from './styles';
+import { Container } from './styles';
 
 const Main: React.FC = () => {
   return (
     <Container>
-        <Header>
-            <button>
-                <BackIcon />
-            </button>
-
-            <ProfileInfo>
-                <strong>Vitor Markis</strong>
-                <span>34 Tweets</span>
-            </ProfileInfo>
-        </Header>
+      <Header />
 
         <ProfilePage />
 

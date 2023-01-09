@@ -5,6 +5,7 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        user-select: none;
 
         color: var(--white)
     }
@@ -17,7 +18,7 @@ export default createGlobalStyle`
     }
     *, button, input {
         border: 0;
-        background-color: none;
+        background-color: transparent;
         font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial;
     }
     :root {
@@ -32,6 +33,9 @@ export default createGlobalStyle`
     --twitter: #33A1F2;
     --twitter-dark-hover: #011017;
     --twitter-light-hover: #2C8ED6;
+    --twitter-interaction-hover: hsl(199, 92%, 10%);
+    --twitter-retweet-hover: hsl(153, 92%, 10%);
+    --twitter-like-hover: hsl(343, 92%, 10%);
   }
 
   html {

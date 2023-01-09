@@ -1,7 +1,9 @@
 import React from 'react';
+import styled from 'styled-components'
 
+import MenuBar from '../MenuBar';
 import Main from '../Main'
-import Tweet from '../Tweet'
+import Sidebar from '../Sidebar';
 
 import { Container, Wrapper } from './styles';
 
@@ -9,13 +11,16 @@ const Layout: React.FC = () => {
   return (
     <Container>
         <Wrapper>
-            {/* <MenuBar /> */}
+            <MenuBar />
             <Main />
-            {/* <Sidebar /> */}
+            <Sidebar />
         </Wrapper>
-      <Tweet />
     </Container>
   )
 }
+
+const NewMenuButton = styled(MenuButton)`
+  outline: 2px solid #ff0;
+`;
 
 export default Layout;
