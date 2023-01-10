@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   Container,
@@ -11,40 +11,45 @@ import {
   EditButton,
 } from './styles';
 import Feed from '../Feed';
+import { UserdataProps } from './types';
+import { spreadData } from '../../scripts/functionals';
 
 const ProfilePage: React.FC = () => {
+  const [userdata, setUserdata] = useState<UserdataProps>();
+
+  useEffect(() => {
+    spreadData(setUserdata, 'users', { username: 'dieegosf' });
+  }, []);
+
   return (
     <Container>
-      <Banner>
-        <Avatar />
+      <Banner banner={userdata?.banner}>
+        <Avatar avatar={userdata?.avatar} />
       </Banner>
       <ProfileData>
         <EditButton outlined>Editar perfil</EditButton>
-        <h1>Vitor Markis</h1>
-        <h2>@vitormarkis998</h2>
+        <h1>{userdata?.name}</h1>
+        <h2>{userdata?.username}</h2>
 
-        <p>
-          Studying Javascript, aprendendo React com o{' '}
-          <a href="https://twitter.com/guilherme_rodz">@guilherme_rodz</a>
-        </p>
+        <p>{userdata?.bio}</p>
 
         <ul>
           <li>
             <LocationIcon />
-            Rio Grande do Sul
+            {userdata?.details.from}
           </li>
           <li>
             <CakeIcon />
-            Nascido(a) em 10 de Junho de 2002
+            {userdata?.details.birth}
           </li>
         </ul>
 
         <Followage>
           <span>
-            <strong>234</strong> seguindo
+            <strong>{userdata?.followage.following}</strong> seguindo
           </span>
           <span>
-            <strong>132</strong> seguidores
+            <strong>{userdata?.followage.followers}</strong> seguidores
           </span>
         </Followage>
       </ProfileData>

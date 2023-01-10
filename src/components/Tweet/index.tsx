@@ -17,7 +17,6 @@ import InteractIcons from '../InteractIcons';
 import { TweetProps } from './types';
 
 const Tweet: React.FC<TweetProps> = (props) => {
-  console.log('Tweet: ', props);
 
   return (
     <Container>

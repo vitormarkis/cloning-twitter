@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import Button from '../Button'
 
 import { LocationOn, Cake } from '../../styles/Icons'
+import { AvatarProps, BannerProps } from './types';
 
 export const Container = styled.div`
     display: flex;
@@ -17,27 +18,28 @@ export const Container = styled.div`
     }
 `;
 
-export const Banner = styled.div`
+export const Banner = styled.div<BannerProps>`
     flex-shrink: 0;
 
     width: 100%;
     height: min(33vw, 199px);
 
     background: var(--twitter);
-    /* background-image: url('https://pbs.twimg.com/profile_banners/1305056552240459776/1600905688/1500x500'); */
+    background-image: ${props => (props.banner) ? `url(${props.banner})` : 'unset'};
+    background-size: cover;
 
     position: relative;
 `
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
     width: max(45px, min(135px, 22vw));
     height: max(45px, min(135px, 22vw));
 
     border: 3.75px solid var(--primary);
     background-color: var(--gray);
-/* 
-    background-image: url('https://github.com/vitormarkis.png');
-    background-size: contain; */
+
+    background-image: ${props => (props.avatar) ? `url(${props.avatar})` : 'unset'};
+    background-size: cover;
 
     border-radius: 50%;
 

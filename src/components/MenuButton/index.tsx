@@ -23,9 +23,10 @@ type MenuButtonProps = {
     | 'perfil'
     | 'more'
     ;
+    className?: string;
 }
 
-const MenuButton: React.FC<MenuButtonProps> = ({ children, icon }: MenuButtonProps) => {
+const MenuButton: React.FC<MenuButtonProps> = ({ children, icon, className }: MenuButtonProps) => {
 
     const setIcon = {
         home: () => <HomeIcon />,  
@@ -39,7 +40,7 @@ const MenuButton: React.FC<MenuButtonProps> = ({ children, icon }: MenuButtonPro
     }
         
   return ( 
-    <Container>
+    <Container className={className}>
       <Hover>
         { setIcon[icon]() }
         <span>{ children }</span>
@@ -68,6 +69,14 @@ const Container = styled.button`
   }
 
    outline: 0;
+
+   &.active {
+    svg > path { fill: var(--twitter) }
+    span { 
+      color: var(--twitter); 
+      font-weight: bold;
+    }
+   }
   
 `;
 

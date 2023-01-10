@@ -113,6 +113,6 @@ export const ImageContent = styled.div<ImageContentProps>`
     cursor: pointer;
 
     &:hover {
-        opacity: .7;
+        opacity: ${props => (props.media_url) ? 'initial' : 0.7 };
     }
 `;

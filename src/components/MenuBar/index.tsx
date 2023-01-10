@@ -27,7 +27,7 @@ const MenuBar: React.FC = () => {
         <MenuButton icon='email'>Mensagens</MenuButton>
         <MenuButton icon='saved'>Salvos</MenuButton>
         <MenuButton icon='list'>Listas</MenuButton>
-        <MenuButton icon='perfil'>Perfil</MenuButton>
+        <MenuButton icon='perfil' className="active">Perfil</MenuButton>
         <MenuButton icon='more'>Ver mais...</MenuButton>
 
         <TweetButton className='tweet-button'>

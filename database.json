@@ -76,5 +76,39 @@
                 "retweet": true
             }
         }
+    ],
+    "users": [
+        {
+            "uuid": 4529138754,
+            "name": "Vitor Markis",
+            "username": "@vitormarkis998",
+            "avatar": "https://avatars.githubusercontent.com/u/121525239?v=4",
+            "banner": "https://pbs.twimg.com/profile_banners/1305056552240459776/1600905688/600x200",
+            "bio": "Studying Javascript, aprendendo React com o Guilherme Rodz",
+            "details": {
+                "from": "Rio Grande do Sul",
+                "birth": "Nascido(a) em 10 de Junho de 2002"
+            },
+            "followage": {
+                "followers": 134,
+                "following": 384
+            }
+        },
+        {
+            "uuid": 7498234734,
+            "name": "Diego Fernandes",
+            "username": "@dieegosf",
+            "avatar": "https://pbs.twimg.com/profile_images/1600239578010509313/eTI7raib_400x400.jpg",
+            "banner": "https://pbs.twimg.com/profile_banners/3066035968/1661990617/600x200",
+            "bio": "⚛ JavaScript • React • Node.js 🚀 CTO & Educator at @Rocketseat💜 Boosting devs to the next level🔥 Nothing in this world can take the place of persistence",
+            "details": {
+                "from": "Rio do Sul",
+                "birth": "Nascido(a) em 27 de Março de 1995"
+            },
+            "followage": {
+                "followers": 31640,
+                "following": 231
+            }
+        }
     ]
 }

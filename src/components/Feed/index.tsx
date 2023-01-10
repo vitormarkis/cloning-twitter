@@ -4,18 +4,14 @@ import Tweet from '../Tweet';
 
 import { Container, Tab, Tweets } from './styles';
 import { TweetProps } from '../Tweet/types';
+import { spreadData } from '../../scripts/functionals';
 
 
 const Feed: React.FC = () => {
   const [posts, setPosts] = useState<TweetProps[]>([]);
   
   useEffect(() => {
-    fetch('http://localhost:3000/posts')
-    .then(response => response.json())
-    .then(data => {
-      setPosts(data)
-      console.log(posts)
-    })
+    spreadData(setPosts)
   }, []);
 
 
