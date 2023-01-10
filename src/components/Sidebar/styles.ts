@@ -3,7 +3,7 @@ import { Search } from '../../styles/Icons'
 
 export const Container = styled.div`
     display: none;
-    padding-top: 57px;
+    padding-top: 0px;
     @media (min-width: 1000px) {
         display: flex;
         flex-direction: column;
