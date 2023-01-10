@@ -12,8 +12,6 @@ interface ListProps {
 }
 
 const List: React.FC<ListProps> = ({ title, elements }) => {
-    console.log(elements)
-    console.log(typeof elements)
   return (
     <Container>
         <Item>

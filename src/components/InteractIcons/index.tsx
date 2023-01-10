@@ -13,7 +13,9 @@ import {
     ShareIcon,
  } from './styles';
 
-const InteractIcons: React.FC = () => {
+import { PostDataProps } from '../Tweet/types';
+
+const InteractIcons: React.FC<PostDataProps> = ({ views, comments, likes, retweets }) => {
   return (
     <Container>
         <Icons>
@@ -22,28 +24,28 @@ const InteractIcons: React.FC = () => {
                     <IconHover />
                     <ViewsIcon />
                 </IconWrapper>
-                <p>2,9mi</p>
+                {views ? <p>{ views }</p> : ''}
             </Status>
             <Status>
                 <IconWrapper>
                     <IconHover />
                     <CommentIcon />
                 </IconWrapper>
-                <p>18</p>
+                {comments ? <p>{ comments }</p> : ''}
             </Status>
             <Status>
                 <IconWrapper>
                     <IconHover />
                     <RetweetIcon />
                 </IconWrapper>
-                <p>18</p>
+                {retweets ? <p>{ retweets }</p> : ''}
             </Status>
             <Status>
                 <IconWrapper>
                     <IconHover />
                     <LikeIcon />
                 </IconWrapper>
-                <p>372</p>
+                {likes ? <p>{ likes }</p> : ''}
             </Status>
             <Status>
                 <IconWrapper>

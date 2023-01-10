@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Rocketseat } from '../../styles/Icons'
 
+import { AvatarProps, ImageContentProps } from './types';
 
 export const Container = styled.div`
     display: flex;
@@ -41,12 +42,14 @@ export const Body = styled.div`
     position: relative;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
     width: 49px;
     height: 49px;
     border-radius: 50%;
     flex-shrink: 0;
     background: var(--gray);
+    background-image: ${props => (props.avatar) ? `url(${props.avatar})` : 'unset'};
+    background-size: cover;
 
     position: absolute;
     top: 0;
@@ -96,12 +99,15 @@ export const Description = styled.p`
     margin-top: 4px;
 `;
 
-export const ImagemContent = styled.div`
+export const ImageContent = styled.div<ImageContentProps>`
     margin-top: 12px;
     width: 100%;
-    height: min(285px, max(175px, 41vw));
+    height: min(100vh, max(175px, 41vw));
 
     background: var(--outline);
+    background-image: ${props => (props.media_url) ? `url(${props.media_url})` : 'unset'};
+    background-size: cover;
+    background-position: center center;
     border-radius: 14px;
 
     cursor: pointer;

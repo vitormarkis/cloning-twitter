@@ -1,51 +1,56 @@
 import React from 'react';
 
 import {
-    Container,
-    Retweeted,
-    RetweetedLogo,
-    Body,
-    Avatar,
-    Content,
-    Header,
-    Dot,
-    Description,
-    ImagemContent,
- } from './styles';
+  Container,
+  Retweeted,
+  RetweetedLogo,
+  Body,
+  Avatar,
+  Content,
+  Header,
+  Dot,
+  Description,
+  ImageContent,
+} from './styles';
 
- import InteractIcons from '../InteractIcons';
+import InteractIcons from '../InteractIcons';
+import { TweetProps } from './types';
 
-const Tweet: React.FC = () => {
+const Tweet: React.FC<TweetProps> = (props) => {
+  console.log('Tweet: ', props);
+
   return (
     <Container>
 
+      {props.your_interaction.retweet ? (
         <Retweeted>
-            <RetweetedLogo />
-            Você retweetou
+          <RetweetedLogo />
+          Você retweetou
         </Retweeted>
+      ) : (
+        ''
+      )}
 
-        <Body>
-            <Avatar />
-            
-            <Content>
-                <Header>
-                    <strong>Nomad Kenya</strong>
-                    <span>@nomadkenyaspots</span>
-                    <Dot />
-                    <time>06 de jan</time>
-                </Header>
+      <Body>
+        <Avatar avatar={props.avatar}/>
 
-                <Description>Um dos lugares mais lindos que já fui!</Description>
+        <Content>
+          <Header>
+            <strong>{ props.name }</strong>
+            <span>{ props.username }</span>
+            <Dot />
+            <time>{ props.date }</time>
+          </Header>
 
-                <ImagemContent />
+          <Description>{ props.text }</Description>
 
-                <InteractIcons />
-            </Content>
-        </Body>
-        
-        
+          {props.media_url ? <ImageContent media_url={props.media_url}/> : ''}
+
+          <InteractIcons {...props.post_data}/>
+        </Content>
+      </Body>
     </Container>
   );
-}
+};
 
 export default Tweet;
