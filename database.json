@@ -2,10 +2,8 @@
     "posts": [
         {
             "id": 1,
-            "name": "Vitor Markis",
             "username": "@vitormarkis998",
             "text": "kkkkk",
-            "avatar": "https://avatars.githubusercontent.com/u/121525239?v=4",
             "media_url": "https://pbs.twimg.com/media/FmAWVbIX0AE2Xjr?format=jpg&name=small",
             "date": "06 de Jan",
             "post_data": {
@@ -21,10 +19,8 @@
         },
         {
             "id": 2,
-            "name": "Diego Fernandes",
             "username": "@dieegosf",
             "text": "Estamos vivendo um momento interessante no mercado de startups. Soluções que resolvem problemas de forma semelhante, mas com precificação mais simples, usabilidade e foco em dev first.Tudo começa com um projeto open source/free 👀",
-            "avatar": "https://pbs.twimg.com/profile_images/1600239578010509313/eTI7raib_400x400.jpg",
             "media_url": "",
             "date": "09 de Jan",
             "post_data": {
@@ -40,10 +36,8 @@
         },
         {
             "id": 3,
-            "name": "Mayk Brito",
-            "username": "@maykbrito",
+            "username": "@dieegosf",
             "text": "Alô Tweeters! O que tá rolando por aqui? Faz tempo que não venho.. qual a boa da sua, da minha, da nossa bolha ?",
-            "avatar": "https://avatars.githubusercontent.com/u/6643122?v=4",
             "media_url": "",
             "date": "12 de Jan",
             "post_data": {
@@ -59,10 +53,7 @@
         },
         {
             "id": 4,
-            "name": "Rodz",
-            "username": "@guilherme_rodz",
-            "text": "Library authors gotta love the `satisfies` operator \n \n Prior to, you had to create functions and run them just to enforce constraints on a variable. \n \n This is TypeScript 4.9 😌",
-            "avatar": "https://pbs.twimg.com/profile_images/1600373815514644480/mKxq-LVX_400x400.jpg",
+            "username": "@dieegosf",
             "media_url": "https://pbs.twimg.com/media/FiMtQhVXEBs6Ucg?format=jpg&name=small",
             "date": "20 de Jan",
             "post_data": {
@@ -81,8 +72,8 @@
         {
             "uuid": 4529138754,
             "name": "Vitor Markis",
-            "username": "@vitormarkis998",
             "avatar": "https://avatars.githubusercontent.com/u/121525239?v=4",
+            "username": "@vitormarkis998",
             "banner": "https://pbs.twimg.com/profile_banners/1305056552240459776/1600905688/600x200",
             "bio": "Studying Javascript, aprendendo React com o Guilherme Rodz",
             "details": {
@@ -97,8 +88,8 @@
         {
             "uuid": 7498234734,
             "name": "Diego Fernandes",
+            "avatar": "https://avatars.githubusercontent.com/u/2254731?v=4",
             "username": "@dieegosf",
-            "avatar": "https://pbs.twimg.com/profile_images/1600239578010509313/eTI7raib_400x400.jpg",
             "banner": "https://pbs.twimg.com/profile_banners/3066035968/1661990617/600x200",
             "bio": "⚛ JavaScript • React • Node.js 🚀 CTO & Educator at @Rocketseat💜 Boosting devs to the next level🔥 Nothing in this world can take the place of persistence",
             "details": {

@@ -1,3 +1,4 @@
+
 interface SpreadDataProps {
   setState: Function;
   route: string;
@@ -5,10 +6,9 @@ interface SpreadDataProps {
 }
 
 export async function spreadData<T extends SpreadDataProps>(
-  setState: T['setState'],
   route: T['route'] = 'posts',
   queryParam: T['queryParam'] = { a: 'a' }
-): Promise<void> {
+): Promise<Array<Object> | Object> {
   const [key, value] = Object.entries(queryParam)[0];
 
   const getFromRoute = () =>
@@ -19,6 +19,5 @@ export async function spreadData<T extends SpreadDataProps>(
     queryParam['a'] === 'a' ? await getFromRoute() : await getFromQuery();
 
   const data = await response.json();
-  console.log(data);
-  setState(queryParam['a'] === 'a' ? data : data[0]);
+  return queryParam['a'] === 'a' ? data : data[0];
 }
