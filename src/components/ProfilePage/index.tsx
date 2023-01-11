@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { UserdataProps } from '../../types/API-Objects';
+
 import {
   Container,
   Banner,
@@ -11,14 +13,20 @@ import {
   EditButton,
 } from './styles';
 import Feed from '../Feed';
-import { UserdataProps } from './types';
 import { spreadData } from '../../scripts/functionals';
+import { sessionUser } from '../../scripts/controls';
 
 const ProfilePage: React.FC = () => {
   const [userdata, setUserdata] = useState<UserdataProps>();
 
   useEffect(() => {
-    spreadData(setUserdata, 'users', { username: 'dieegosf' });
+    async function spreadUserdata() {
+      const userdataResponse = await spreadData('users', sessionUser);
+      console.log('userdataResponse', userdataResponse)
+      setUserdata(userdataResponse as UserdataProps)
+    }
+
+    spreadUserdata()
   }, []);
 
   return (

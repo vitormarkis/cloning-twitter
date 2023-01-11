@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { sessionUser } from '../../scripts/controls';
+import { spreadData } from '../../scripts/functionals';
+import LoggedUser from '../LoggedUser';
 import MenuButton from '../MenuButton';
 import {
   Container,
@@ -7,13 +10,21 @@ import {
   Logo,
   TweetButton,
   TweetIcon,
-  Bottom,
-  Avatar,
-  ProfileData,
-  ExitIcon,
 } from './styles';
 
+
 const MenuBar: React.FC = () => {
+  const [user, setUser] = useState()
+  
+  useEffect(() => {
+    async function spreadUserdata() {
+      const userdataResponse = await spreadData('users', sessionUser);
+      setUser(userdataResponse)
+    }
+
+    spreadUserdata()
+  }, []);
+  
   return (
     <Container>
       <Top>
@@ -36,14 +47,7 @@ const MenuBar: React.FC = () => {
         </TweetButton>
       </Top>
 
-      <Bottom>
-        <Avatar />
-        <ProfileData>
-          <strong>Vitor Markis</strong>
-          <span>@vitormarkis998</span>
-        </ProfileData>
-        <ExitIcon />
-      </Bottom>
+      <LoggedUser {...user}/>
     </Container>
   );
 };
