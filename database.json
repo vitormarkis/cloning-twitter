@@ -101,5 +101,23 @@
                 "following": 231
             }
         }
+    ],
+    "follow_suggestion": [
+        {
+            "username": "@dieegosf",
+            "active": true
+        },
+        {
+            "username": "@dieegosf",
+            "active": false
+        },
+        {
+            "username": "@vitormarkis998",
+            "active": true
+        },
+        {
+            "username": "@dieegosf",
+            "active": false
+        }
     ]
 }

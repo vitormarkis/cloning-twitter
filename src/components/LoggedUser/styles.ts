@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Exit } from '../../styles/Icons';
+import { AvatarProps } from '../../types';
 
 export const Container = styled.div`
   margin-top: 20px;
@@ -9,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
   width: 39px;
   height: 39px;
 

@@ -45,11 +45,15 @@ export type add_TweetProps = {
   avatar: string;
 };
 
-export interface PostsProps {
-  id: number;
+export type BannerProps = {
+  banner?: string;
+};
+
+export type AvatarProps = {
+  avatar?: string;
+};
+
+export interface FollowSuggestionProps {
   username: string;
-  media_url: string;
-  date: string;
-  post_data: PostDataProps;
-  your_interaction: YourInteractionProps;
+  active: boolean;
 }

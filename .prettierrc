@@ -1,10 +1,10 @@
 {
-  "jsxSingleQuote": true,
-  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "singleQuote": false,
   "trailingComma": "es5",
   "tabWidth": 2,
   "proseWrap": "preserve",
-  "printWidth": 80,
+  "printWidth": 140,
   "bracketSpacing": true,
   "bracketSameLine": false,
   "singleAttributePerLine": true

@@ -4,11 +4,7 @@ import Tweet from '../Tweet';
 
 import { Container, Tab, Tweets } from './styles';
 import { spreadData } from '../../scripts/functionals';
-import {
-  add_TweetProps,
-  PostsProps,
-  UserdataProps,
-} from '../../types/API-Objects';
+import { add_TweetProps, PostsProps, UserdataProps } from '../../types';
 
 interface TweetProps extends PostsProps, add_TweetProps {}
 
@@ -53,7 +49,16 @@ const Feed: React.FC = () => {
     <Container>
       <Tab>Tweets</Tab>
       <Tweets>
-        {posts && posts.map((post) => post && <Tweet key={post.id}{...post}/>)}
+        {posts &&
+          posts.map(
+            (post) =>
+              post && (
+                <Tweet
+                  key={post.id}
+                  {...post}
+                />
+              )
+          )}
       </Tweets>
     </Container>
   );

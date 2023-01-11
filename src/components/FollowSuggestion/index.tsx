@@ -4,20 +4,22 @@ import { Container, Avatar, Info, FollowButton } from './styles';
 
 type FollowSuggestionProps = {
   name: string;
-  nickname: string;
+  username: string;
+  avatar: string;
 };
 
 const FollowSuggestion: React.FC<FollowSuggestionProps> = ({
   name,
-  nickname,
+  username,
+  avatar,
 }) => {
   return (
     <Container>
       <div>
-        <Avatar />
+        <Avatar avatar={avatar}/>
         <Info>
           <strong>{name}</strong>
-          <span>{nickname}</span>
+          <span>{username}</span>
         </Info>
       </div>
 

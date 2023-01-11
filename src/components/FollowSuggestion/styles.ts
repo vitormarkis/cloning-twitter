@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { AvatarProps } from '../../types';
 import Button from '../Button';
 
 export const Container = styled.div`
@@ -12,10 +13,14 @@ export const Container = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.div<AvatarProps>`
   width: 49px;
   height: 49px;
+
   background-color: var(--gray);
+  background-image: ${(props) => (props.avatar ? `url(${props.avatar})` : 'unset')};
+  background-size: cover;
+
   border-radius: 50%;
   margin-right: 10px;
 `;

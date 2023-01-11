@@ -2,7 +2,13 @@ import React from 'react';
 
 import { Container, Avatar, ProfileData, ExitIcon } from './styles';
 
-const LoggedUser: React.FC = ({ name, username, avatar }) => {
+interface LoggedUser {
+  name: string;
+  username: string;
+  avatar: string;
+}
+
+const LoggedUser: React.FC<LoggedUser> = ({ name, username, avatar }) => {
   return (
     <Container>
       <Avatar avatar={avatar} />

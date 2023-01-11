@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { UserdataProps } from '../../types/API-Objects';
+import { UserdataProps } from '../../types';
 
 import {
   Container,
@@ -22,11 +22,11 @@ const ProfilePage: React.FC = () => {
   useEffect(() => {
     async function spreadUserdata() {
       const userdataResponse = await spreadData('users', sessionUser);
-      console.log('userdataResponse', userdataResponse)
-      setUserdata(userdataResponse as UserdataProps)
+      console.log('userdataResponse', userdataResponse);
+      setUserdata(userdataResponse as UserdataProps);
     }
 
-    spreadUserdata()
+    spreadUserdata();
   }, []);
 
   return (

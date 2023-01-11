@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import Button from '../Button'
 
 import { LocationOn, Cake } from '../../styles/Icons'
-import { AvatarProps, BannerProps } from './types';
+import { AvatarProps, BannerProps } from '../../types';
 
 export const Container = styled.div`
     display: flex;
@@ -45,7 +45,6 @@ export const Avatar = styled.div<AvatarProps>`
 
     position: absolute;
     bottom: max(-60px, -10vw);
-    /* bottom: max(-60px, -10vw); */
     left: 15px;
 `
 
